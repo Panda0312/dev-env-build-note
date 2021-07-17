@@ -1,0 +1,8 @@
+For Building Nodejs Environment
+
+1. create folder <myproject>
+2. enter directory run npm init -y
+
+Tips:
+  1. to user import/export of ES6 in node
+     we need to open package.json add config: "type":"module"
