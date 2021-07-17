@@ -1,0 +1,33 @@
+1. install node from official site
+2. install git
+3. download flutter sdk then set the user env variable 'Path'
+4. run flutter doctor
+5. follow the instruction, install Java,  download Android Studio
+
+6. If you do not have VPN, there would be an issue below:
+    'unable to access android sdk add-on list'
+
+    solution: set proxy
+    i. manual proxy configuration
+    ii. hostname: mirrors.neusoft.edu.cn    port:80
+   restart Android Studio
+   -------
+   After download the add-on list, there will be another issue:
+    'SDK emulator directory is missing'
+    
+    solution: Configure -> SDK Manager -> System Setting -> Http proxy
+    choose No Proxy
+   restart Android Studio the SDK emulator will start to download
+
+7. run flutter doctor check the result
+   -issue: run flutter doctor --android-licenses
+           got Exception in thread "main" java.lang.NoClassDefFoundError
+   -solution: open android studio
+           Configure -> sdk manager -> Switch to SDK Tools
+           check Android SDK Command-line Tools(latest) and apply install install
+
+   -issue: Android studio not found
+   -solution: flutter config --android-studio-dir <directory>
+    tips: if your directory contains space wrap the directory with ""
+
+Then Your Flutter Envrionment will be ready. Run flutter doctor will get all green!
